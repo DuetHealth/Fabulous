@@ -233,7 +233,7 @@ import UIKit
             bottomAnchor = view.safeAreaLayoutGuide.bottomAnchor
             rightAnchor = view.safeAreaLayoutGuide.rightAnchor
         } else {
-            bottomAnchor = bottomLayoutGuide.topAnchor
+            bottomAnchor = view.bottomAnchor
             rightAnchor = view.rightAnchor
         }
 
