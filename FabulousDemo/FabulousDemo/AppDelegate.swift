@@ -16,10 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let window = UIWindow(frame: UIScreen.main.bounds)
         let navigationController = UINavigationController(rootViewController: ViewController())
-        navigationController.navigationBar.prefersLargeTitles = true
-        navigationController.navigationBar.largeTitleTextAttributes = [
-            .foregroundColor: UIColor(red: 0.3098, green: 0.6235, blue: 0.2745, alpha: 1)
-        ]
+        if #available(iOS 11.0, *) {
+            navigationController.navigationBar.prefersLargeTitles = true
+            navigationController.navigationBar.largeTitleTextAttributes = [
+                .foregroundColor: UIColor(red: 0.3098, green: 0.6235, blue: 0.2745, alpha: 1)
+            ]
+        }
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
 
@@ -29,4 +31,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
+
 
