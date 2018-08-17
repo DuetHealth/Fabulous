@@ -196,7 +196,7 @@ import UIKit
         guard overlay.alpha != 1 else { return }
         UIView.animate(withDuration: 0.2, animations: {
             self.overlay.alpha = 1
-        }, completion: {
+        }, completion: { _ in
             self.overlay.isUserInteractionEnabled = true
         })
     }
