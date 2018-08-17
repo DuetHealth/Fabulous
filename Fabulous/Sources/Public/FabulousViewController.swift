@@ -186,7 +186,7 @@ import UIKit
 
     @objc public func hideFab() {
         guard overlay.alpha != 0 else { return }
-        overlay.isUserInteractionEnabled = false
+        primaryButton.isEnabled = false
         UIView.animate(withDuration: 0.2, animations: {
             self.overlay.alpha = 0
         })
@@ -197,7 +197,7 @@ import UIKit
         UIView.animate(withDuration: 0.2, animations: {
             self.overlay.alpha = 1
         }, completion: { _ in
-            self.overlay.isUserInteractionEnabled = true
+            self.primaryButton.isEnabled = true
         })
     }
 
