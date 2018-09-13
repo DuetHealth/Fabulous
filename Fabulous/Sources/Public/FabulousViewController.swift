@@ -194,6 +194,7 @@ import UIKit
 
     @objc public func showFab() {
         guard overlay.alpha != 1 else { return }
+        primaryButton.isEnabled = true 
         UIView.animate(withDuration: 0.2, animations: {
             self.overlay.alpha = 1
         }, completion: { _ in
