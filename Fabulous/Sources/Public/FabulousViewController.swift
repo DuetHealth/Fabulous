@@ -187,7 +187,6 @@ import UIKit
     @objc public func hideFab() {
         guard overlay.alpha != 0 else { return }
         overlay.removeFromSuperview()
-        primaryButton.isEnabled = false
         UIView.animate(withDuration: 0.2, animations: {
             self.overlay.alpha = 0
         })
@@ -196,12 +195,12 @@ import UIKit
     @objc public func showFab() {
         if let supportedView = self.supportedContainerView {
             addOverlayToContainer(view: supportedView )
+        } else {
+            addOverlayToSelf()
         }
         guard overlay.alpha != 1 else { return }
         UIView.animate(withDuration: 0.2, animations: {
             self.overlay.alpha = 1
-        }, completion: { _ in
-            self.primaryButton.isEnabled = true
         })
     }
 
