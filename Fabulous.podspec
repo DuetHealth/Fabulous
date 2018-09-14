@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name          = 'Fabulous'
-  s.version       = '1.0.2'
+  s.version       = '1.0.3'
   s.summary       = 'A material-inspired floating action button.'
   s.description   = <<-DESC
                     A material-inspired floating action button with a little Human Interface flair.
