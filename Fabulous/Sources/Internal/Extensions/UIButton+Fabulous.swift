@@ -5,12 +5,12 @@ fileprivate var fabulousActionKey: UInt8 = 0
 
 extension UIButton {
 
-    func addAction(_ action: FabulousAction, for controlEvents: UIControlEvents) {
+    func addAction(_ action: FabulousAction, for controlEvents: UIControl.Event) {
         objc_setAssociatedObject(self, &fabulousActionKey, action, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         self.addTarget(self, action: #selector(triggerAction), for: controlEvents)
     }
 
-    func removeAction(for controlEvents: UIControlEvents) {
+    func removeAction(for controlEvents: UIControl.Event) {
         objc_setAssociatedObject(self, &fabulousActionKey, nil, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         self.removeTarget(self, action: #selector(triggerAction), for: controlEvents)
     }
@@ -35,8 +35,8 @@ extension UIButton {
         let animationGroup = CAAnimationGroup()
         animationGroup.animations = [offsetAnimation, opacityAnimation]
         animationGroup.duration = 0.2
-        animationGroup.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
-        animationGroup.fillMode = kCAFillModeForwards
+        animationGroup.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
+        animationGroup.fillMode = CAMediaTimingFillMode.forwards
         animationGroup.isRemovedOnCompletion = false
 
         layer.add(animationGroup, forKey: String(describing: #selector(animateToLowShadow)))
@@ -53,8 +53,8 @@ extension UIButton {
         let animationGroup = CAAnimationGroup()
         animationGroup.animations = [offsetAnimation, opacityAnimation]
         animationGroup.duration = 0.4
-        animationGroup.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
-        animationGroup.fillMode = kCAFillModeForwards
+        animationGroup.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeIn)
+        animationGroup.fillMode = CAMediaTimingFillMode.forwards
         animationGroup.isRemovedOnCompletion = false
 
         layer.add(animationGroup, forKey: String(describing: #selector(animateToHighShadow)))

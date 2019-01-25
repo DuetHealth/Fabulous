@@ -13,7 +13,7 @@ import UIKit
     /// The blur style of the blur effect, when active.
     ///
     /// The default value of this is `.regular` or `.light` depending on availability.
-    @objc public dynamic var blurEffectStyle: UIBlurEffectStyle = {
+    @objc public dynamic var blurEffectStyle: UIBlurEffect.Style = {
         if #available(iOS 10.0, *) { return .regular }
         else { return .light }
     }() {

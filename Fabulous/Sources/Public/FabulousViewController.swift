@@ -72,8 +72,8 @@ import UIKit
         overlay = FabulousOverlay()
         super.init(nibName: nil, bundle: nil)
 
-        viewController.addChildViewController(self)
-        didMove(toParentViewController: viewController)
+        viewController.addChild(self)
+        didMove(toParent: viewController)
     }
 
     @objc public convenience init(overlying viewController: UIViewController, _ builder: (FabulousViewController) -> ()) {
@@ -111,7 +111,7 @@ import UIKit
         primaryButton.addTarget(self, action: #selector(showActions), for: .touchUpInside)
     }
 
-    open override func didMove(toParentViewController parent: UIViewController?) {
+    open override func didMove(toParent parent: UIViewController?) {
         guard let parentView = parent?.view else {
             self.view.removeFromSuperview()
             overlay.removeFromSuperview()

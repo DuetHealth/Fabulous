@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name          = 'Fabulous'
-  s.version       = '1.0.3'
+  s.version       = '2.0.0'
   s.summary       = 'A material-inspired floating action button.'
   s.description   = <<-DESC
                     A material-inspired floating action button with a little Human Interface flair.
@@ -15,5 +15,5 @@ Pod::Spec.new do |s|
   s.source        = { git: 'https://github.com/DuetHealth/Fabulous.git', tag: "#{s.version}" }
   s.source_files  = "Fabulous/Sources/**/*.{h,m,swift}"
   s.resources     = "Fabulous/Resources/**"
-  s.swift_version = '4.1'
+  s.swift_version = '4.2'
 end
