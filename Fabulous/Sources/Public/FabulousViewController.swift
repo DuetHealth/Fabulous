@@ -60,7 +60,7 @@ import UIKit
             parent?.tabBarController?.navigationController?.view ??
             parent?.navigationController?.view ??
             parent?.tabBarController?.view ??
-            parent?.view
+            parent?.view as UIView?
     }
 
     /// Creates and returns a new fab, automatically establishing a parent-child relationship with
