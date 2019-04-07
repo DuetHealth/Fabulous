@@ -165,19 +165,19 @@ import UIKit
 
     /// Inserts the action before the given action, returning the created views for customization.
     @discardableResult @objc public func insertAction(_ action: FabulousAction, before other: FabulousAction) -> FabulousActionViews {
-        let index = actions.index(of: other) ?? 0
+        let index = actions.firstIndex(of: other) ?? 0
         return insertAction(action, at: index)
     }
 
     /// Inserts the action after the given action, returning the created views for customization.
     @discardableResult @objc public func insertAction(_ action: FabulousAction, after other: FabulousAction) -> FabulousActionViews {
-        let index = actions.index(of: other).map { $0 + 1 } ?? 0
+        let index = actions.firstIndex(of: other).map { $0 + 1 } ?? 0
         return insertAction(action, at: index)
     }
 
     /// Removes the action from the list of actions.
     @objc public func removeAction(_ action: FabulousAction) {
-        guard let index = actions.index(of: action) else { return }
+        guard let index = actions.firstIndex(of: action) else { return }
         actions.remove(at: index)
         let subview = actionsStackView.arrangedSubviews[actionsStackView.arrangedSubviews.count - 1 - index]
         actionsStackView.removeArrangedSubview(subview)

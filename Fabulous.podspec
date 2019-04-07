@@ -15,5 +15,5 @@ Pod::Spec.new do |s|
   s.source        = { git: 'https://github.com/DuetHealth/Fabulous.git', tag: "#{s.version}" }
   s.source_files  = "Fabulous/Sources/**/*.{h,m,swift}"
   s.resources     = "Fabulous/Resources/**"
-  s.swift_version = '4.2'
+  s.swift_version = '5.0'
 end
