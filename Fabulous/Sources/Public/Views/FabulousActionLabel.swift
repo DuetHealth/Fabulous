@@ -37,7 +37,7 @@ import UIKit
     }
 
     public override func drawText(in rect: CGRect) {
-        super.drawText(in: UIEdgeInsetsInsetRect(rect, contentInsets))
+        super.drawText(in: rect.inset(by: contentInsets))
     }
 
     /// Workaround for odd behavior when attempting to use base class appearance selectors.

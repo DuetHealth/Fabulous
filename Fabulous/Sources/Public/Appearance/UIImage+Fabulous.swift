@@ -11,7 +11,7 @@ import UIKit
 @objc public extension UIImage {
 
     /// Returns the fab's default plus image.
-    public static var fabulousDefaultAddImage: UIImage? {
+    static var fabulousDefaultAddImage: UIImage? {
         return UIImage(named: "fab-default-add", in: Bundle(for: FabulousViewController.self), compatibleWith: nil)
     }
 

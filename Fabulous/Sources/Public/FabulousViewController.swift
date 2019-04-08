@@ -60,7 +60,7 @@ import UIKit
             parent?.tabBarController?.navigationController?.view ??
             parent?.navigationController?.view ??
             parent?.tabBarController?.view ??
-            parent?.view
+            parent?.view as UIView?
     }
 
     /// Creates and returns a new fab, automatically establishing a parent-child relationship with
@@ -72,8 +72,8 @@ import UIKit
         overlay = FabulousOverlay()
         super.init(nibName: nil, bundle: nil)
 
-        viewController.addChildViewController(self)
-        didMove(toParentViewController: viewController)
+        viewController.addChild(self)
+        didMove(toParent: viewController)
     }
 
     @objc public convenience init(overlying viewController: UIViewController, _ builder: (FabulousViewController) -> ()) {
@@ -111,7 +111,7 @@ import UIKit
         primaryButton.addTarget(self, action: #selector(showActions), for: .touchUpInside)
     }
 
-    open override func didMove(toParentViewController parent: UIViewController?) {
+    open override func didMove(toParent parent: UIViewController?) {
         guard let parentView = parent?.view else {
             self.view.removeFromSuperview()
             overlay.removeFromSuperview()
@@ -165,19 +165,19 @@ import UIKit
 
     /// Inserts the action before the given action, returning the created views for customization.
     @discardableResult @objc public func insertAction(_ action: FabulousAction, before other: FabulousAction) -> FabulousActionViews {
-        let index = actions.index(of: other) ?? 0
+        let index = actions.firstIndex(of: other) ?? 0
         return insertAction(action, at: index)
     }
 
     /// Inserts the action after the given action, returning the created views for customization.
     @discardableResult @objc public func insertAction(_ action: FabulousAction, after other: FabulousAction) -> FabulousActionViews {
-        let index = actions.index(of: other).map { $0 + 1 } ?? 0
+        let index = actions.firstIndex(of: other).map { $0 + 1 } ?? 0
         return insertAction(action, at: index)
     }
 
     /// Removes the action from the list of actions.
     @objc public func removeAction(_ action: FabulousAction) {
-        guard let index = actions.index(of: action) else { return }
+        guard let index = actions.firstIndex(of: action) else { return }
         actions.remove(at: index)
         let subview = actionsStackView.arrangedSubviews[actionsStackView.arrangedSubviews.count - 1 - index]
         actionsStackView.removeArrangedSubview(subview)
