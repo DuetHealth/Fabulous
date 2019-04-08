@@ -8,9 +8,9 @@ Fabulous is a material-inspired floating action button with a little Human Inter
 
 ### Installation
 
-Cocoapods: `pod 'Fabulous', '~> 1.0'`. See [Fabulous.podspec](Fabulous.podspec) for more information.
+Cocoapods: `pod 'Fabulous', '~> 2.0'`. See [Fabulous.podspec](Fabulous.podspec) for more information.
 
-Carthage: `github "DuetHealth/Fabulous" ~> 1.0 && carthage update`
+Carthage: `github "DuetHealth/Fabulous" ~> 2.0 && carthage update`
 
 ### Adding a fab
 
