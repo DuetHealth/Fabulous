@@ -8,6 +8,23 @@ Fabulous is a material-inspired floating action button with a little Human Inter
 
 ### Installation
 
+Swift Package Manager: 
+```
+// swift-tools-version:5.0
+
+import PackageDescription
+
+let package = Package(
+  name: "FabulousTestProject",
+  dependencies: [
+    .package(url: "https://github.com/DuetHealth/Fabulous.git", from: "2.0.1")
+  ],
+  targets: [
+    .target(name: "FabulousTestProject", dependencies: ["Fabulous"])
+  ]
+)
+```
+
 Cocoapods: `pod 'Fabulous', '~> 2.0'`. See [Fabulous.podspec](Fabulous.podspec) for more information.
 
 Carthage: `github "DuetHealth/Fabulous" ~> 2.0 && carthage update`
