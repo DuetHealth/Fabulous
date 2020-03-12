@@ -57,7 +57,7 @@
 				94AAFB9320EEA6B100A1B0BF /* Actions */,
 				94BC614620F9256D0073D3E2 /* Appearance */,
 				94AAFB9220EEA6AC00A1B0BF /* Views */,
-				947A47BC20EA8B43005A353D /* FabulousViewController.swift */,
+				94AAFB8A20EEA62600A1B0BF /* Internal */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -108,9 +108,9 @@
 		947A47BB20EA8B31005A353D /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				94AAFB8B20EEA62E00A1B0BF /* Public */,
-				94AAFB8A20EEA62600A1B0BF /* Internal */,
 				947A47B320EA8B19005A353D /* Fabulous.h */,
+				1EC78D62241A94C600645D6C /* Objc */,
+				1EC78D61241A94B000645D6C /* Swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -142,19 +142,11 @@
 			path = Internal;
 			sourceTree = "<group>";
 		};
-		94AAFB8B20EEA62E00A1B0BF /* Public */ = {
-			isa = PBXGroup;
-			children = (
-				1EC78D62241A94C600645D6C /* Objc */,
-				1EC78D61241A94B000645D6C /* Swift */,
-			);
-			path = Public;
-			sourceTree = "<group>";
-		};
 		94AAFB9220EEA6AC00A1B0BF /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				94AAFB9620EEA6FC00A1B0BF /* FabulousActionLabel.swift */,
+				947A47BC20EA8B43005A353D /* FabulousViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
