@@ -23,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1EC78D65241A9A6B00645D6C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		947A47B020EA8B19005A353D /* Fabulous.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Fabulous.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		947A47B320EA8B19005A353D /* Fabulous.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fabulous.h; sourceTree = "<group>"; };
 		947A47B420EA8B19005A353D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,11 +52,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1EC78D61241A94B000645D6C /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				94AAFB9320EEA6B100A1B0BF /* Actions */,
+				94BC614620F9256D0073D3E2 /* Appearance */,
+				94AAFB9220EEA6AC00A1B0BF /* Views */,
+				94AAFB8A20EEA62600A1B0BF /* Internal */,
+			);
+			path = Swift;
+			sourceTree = "<group>";
+		};
+		1EC78D62241A94C600645D6C /* Objc */ = {
+			isa = PBXGroup;
+			children = (
+				1EC78D63241A94CE00645D6C /* include */,
+				9484267420EE7F0400BE099A /* FabulousButton.m */,
+			);
+			path = Objc;
+			sourceTree = "<group>";
+		};
+		1EC78D63241A94CE00645D6C /* include */ = {
+			isa = PBXGroup;
+			children = (
+				9484267320EE7F0400BE099A /* FabulousButton.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		1EC78D64241A9A6B00645D6C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1EC78D65241A9A6B00645D6C /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		947A47A620EA8B18005A353D = {
 			isa = PBXGroup;
 			children = (
 				947A47B220EA8B19005A353D /* Fabulous */,
 				947A47B120EA8B19005A353D /* Products */,
+				1EC78D64241A9A6B00645D6C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,9 +118,9 @@
 		947A47BB20EA8B31005A353D /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				94AAFB8B20EEA62E00A1B0BF /* Public */,
-				94AAFB8A20EEA62600A1B0BF /* Internal */,
 				947A47B320EA8B19005A353D /* Fabulous.h */,
+				1EC78D62241A94C600645D6C /* Objc */,
+				1EC78D61241A94B000645D6C /* Swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -114,23 +152,11 @@
 			path = Internal;
 			sourceTree = "<group>";
 		};
-		94AAFB8B20EEA62E00A1B0BF /* Public */ = {
-			isa = PBXGroup;
-			children = (
-				94AAFB9320EEA6B100A1B0BF /* Actions */,
-				94BC614620F9256D0073D3E2 /* Appearance */,
-				94AAFB9220EEA6AC00A1B0BF /* Views */,
-				947A47BC20EA8B43005A353D /* FabulousViewController.swift */,
-			);
-			path = Public;
-			sourceTree = "<group>";
-		};
 		94AAFB9220EEA6AC00A1B0BF /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9484267320EE7F0400BE099A /* FabulousButton.h */,
-				9484267420EE7F0400BE099A /* FabulousButton.m */,
 				94AAFB9620EEA6FC00A1B0BF /* FabulousActionLabel.swift */,
+				947A47BC20EA8B43005A353D /* FabulousViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -391,6 +417,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.duet.fabulous.Fabulous;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -419,6 +446,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.duet.fabulous.Fabulous;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
