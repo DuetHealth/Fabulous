@@ -23,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1EC78D65241A9A6B00645D6C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		947A47B020EA8B19005A353D /* Fabulous.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Fabulous.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		947A47B320EA8B19005A353D /* Fabulous.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fabulous.h; sourceTree = "<group>"; };
 		947A47B420EA8B19005A353D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -79,11 +80,20 @@
 			path = include;
 			sourceTree = "<group>";
 		};
+		1EC78D64241A9A6B00645D6C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1EC78D65241A9A6B00645D6C /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		947A47A620EA8B18005A353D = {
 			isa = PBXGroup;
 			children = (
 				947A47B220EA8B19005A353D /* Fabulous */,
 				947A47B120EA8B19005A353D /* Products */,
+				1EC78D64241A9A6B00645D6C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
