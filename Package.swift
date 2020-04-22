@@ -14,10 +14,7 @@ let package = Package(
     targets: [
         .target(
             name: "Fabulous",
-            dependencies: ["FabulousObjc"],
-            path: "Fabulous/Sources/Swift"),
-        .target(
-            name: "FabulousObjc",
             dependencies: [],
-            path: "Fabulous/Sources/Objc")]
+            path: "Fabulous/Sources/Swift"),
+    ]
 )

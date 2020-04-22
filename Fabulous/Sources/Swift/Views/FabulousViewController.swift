@@ -1,8 +1,5 @@
 import Foundation
 import UIKit
-#if SWIFT_PACKAGE
-import FabulousObjc
-#endif
 
 /// Manages the lifecycle and presentation of a floating action button ("fab").
 ///

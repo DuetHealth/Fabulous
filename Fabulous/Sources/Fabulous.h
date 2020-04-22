@@ -15,5 +15,3 @@ FOUNDATION_EXPORT double FabulousVersionNumber;
 FOUNDATION_EXPORT const unsigned char FabulousVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <Fabulous/PublicHeader.h>
-
-#import <Fabulous/FabulousButton.h>
