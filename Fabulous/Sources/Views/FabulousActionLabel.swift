@@ -1,15 +1,7 @@
-//
-//  FabulousActionLabel.swift
-//  Fabulous
-//
-//  Created by Ryan Wachowski on 7/5/18.
-//  Copyright © 2018 Duet Health LLC. All rights reserved.
-//
-
 import Foundation
 import UIKit
 
-@objc public class FabulousActionLabel: UILabel {
+public class FabulousActionLabel: UILabel {
 
     public override var intrinsicContentSize: CGSize {
         let contentSize = super.intrinsicContentSize
@@ -41,12 +33,12 @@ import UIKit
     }
 
     /// Workaround for odd behavior when attempting to use base class appearance selectors.
-    @objc public dynamic func setTextColor(to color: UIColor) {
+    public dynamic func setTextColor(to color: UIColor) {
         self.textColor = color
     }
 
     /// Workaround for odd behavior when attempting to use base class appearance selectors.
-    @objc public dynamic func setBackgroundColor(to color: UIColor) {
+    public dynamic func setBackgroundColor(to color: UIColor) {
         self.backgroundColor = color
     }
 
