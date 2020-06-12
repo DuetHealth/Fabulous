@@ -105,10 +105,11 @@ open class FabulousViewController: UIViewController {
         ])
         overlay.interceptingView = primaryButton
 
-        primaryButton.setImage(.fabulousDefaultAddImage, for: .normal)
-        primaryButton.imageEdgeInsets = .standardImageInsets
         primaryButton.addLowShadow()
         primaryButton.layer.cornerRadius = .buttonSize / 2
+        guard primaryAction == nil else { return }
+        primaryButton.setImage(.fabulousDefaultAddImage, for: .normal)
+        primaryButton.imageEdgeInsets = .standardImageInsets
         primaryButton.addTarget(self, action: #selector(showActions), for: .touchUpInside)
     }
 
