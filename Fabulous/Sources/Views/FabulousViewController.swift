@@ -24,6 +24,7 @@ open class FabulousViewController: UIViewController {
             }
             if isShowingActions { hideActions() }
             primaryButton.removeTarget(self, action: #selector(showActions), for: .touchUpInside)
+            primaryButton.setImage(action.image, for: .normal)
             primaryButton.addAction(action, for: .touchUpInside)
         }
     }
