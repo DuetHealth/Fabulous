@@ -6,7 +6,9 @@ import UIKit
 /// You may use this class to customize the style and behavior triggered by a speed-dial action.
 /// After customizing the action, add it to a `FabulousViewController` to include it in the fab's
 /// shown speed-dial actions.
-public class FabulousAction: NSObject {
+public struct FabulousAction: Identifiable {
+
+    public let id = AnyHashable(UUID())
 
     /// The title of the action. If this value is `nil`, no title is shown.
     public let title: String?
