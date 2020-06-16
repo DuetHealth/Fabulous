@@ -19,7 +19,7 @@ import PackageDescription
 let package = Package(
   name: "FabulousTestProject",
   dependencies: [
-    .package(url: "https://github.com/DuetHealth/Fabulous.git", from: "2.0.1")
+    .package(url: "https://github.com/DuetHealth/Fabulous.git", from: "3.0.0")
   ],
   targets: [
     .target(name: "FabulousTestProject", dependencies: ["Fabulous"])
