@@ -7,11 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		943840D524940C7D00B7C4D3 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943840D424940C7D00B7C4D3 /* UIButton.swift */; };
 		947A47B520EA8B19005A353D /* Fabulous.h in Headers */ = {isa = PBXBuildFile; fileRef = 947A47B320EA8B19005A353D /* Fabulous.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		947A47BD20EA8B43005A353D /* FabulousViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A47BC20EA8B43005A353D /* FabulousViewController.swift */; };
 		947A47C020EAAD7B005A353D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 947A47BF20EAAD7B005A353D /* Images.xcassets */; };
-		9484267520EE7F0400BE099A /* FabulousButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 9484267320EE7F0400BE099A /* FabulousButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9484267620EE7F0400BE099A /* FabulousButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9484267420EE7F0400BE099A /* FabulousButton.m */; };
 		94AAFB8920EEA5FA00A1B0BF /* UIButton+Fabulous.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AAFB8820EEA5FA00A1B0BF /* UIButton+Fabulous.swift */; };
 		94AAFB8D20EEA65B00A1B0BF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AAFB8C20EEA65B00A1B0BF /* Constants.swift */; };
 		94AAFB8F20EEA67300A1B0BF /* FabulousAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AAFB8E20EEA67300A1B0BF /* FabulousAction.swift */; };
@@ -19,18 +18,17 @@
 		94AAFB9520EEA6CC00A1B0BF /* FabulousOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AAFB9420EEA6CC00A1B0BF /* FabulousOverlay.swift */; };
 		94AAFB9720EEA6FC00A1B0BF /* FabulousActionLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AAFB9620EEA6FC00A1B0BF /* FabulousActionLabel.swift */; };
 		94AAFB9F20EF9B4F00A1B0BF /* UIView+Fabulous.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AAFB9E20EF9B4E00A1B0BF /* UIView+Fabulous.swift */; };
-		94BC614820F9256E0073D3E2 /* UIImage+Fabulous.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BC614720F9256D0073D3E2 /* UIImage+Fabulous.swift */; };
+		94BC614820F9256E0073D3E2 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BC614720F9256D0073D3E2 /* UIImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1EC78D65241A9A6B00645D6C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		943840D424940C7D00B7C4D3 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		947A47B020EA8B19005A353D /* Fabulous.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Fabulous.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		947A47B320EA8B19005A353D /* Fabulous.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fabulous.h; sourceTree = "<group>"; };
 		947A47B420EA8B19005A353D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		947A47BC20EA8B43005A353D /* FabulousViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FabulousViewController.swift; sourceTree = "<group>"; };
 		947A47BF20EAAD7B005A353D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		9484267320EE7F0400BE099A /* FabulousButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FabulousButton.h; sourceTree = "<group>"; };
-		9484267420EE7F0400BE099A /* FabulousButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FabulousButton.m; sourceTree = "<group>"; };
 		94AAFB8820EEA5FA00A1B0BF /* UIButton+Fabulous.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Fabulous.swift"; sourceTree = "<group>"; };
 		94AAFB8C20EEA65B00A1B0BF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		94AAFB8E20EEA67300A1B0BF /* FabulousAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FabulousAction.swift; sourceTree = "<group>"; };
@@ -38,7 +36,8 @@
 		94AAFB9420EEA6CC00A1B0BF /* FabulousOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FabulousOverlay.swift; sourceTree = "<group>"; };
 		94AAFB9620EEA6FC00A1B0BF /* FabulousActionLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FabulousActionLabel.swift; sourceTree = "<group>"; };
 		94AAFB9E20EF9B4E00A1B0BF /* UIView+Fabulous.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Fabulous.swift"; sourceTree = "<group>"; };
-		94BC614720F9256D0073D3E2 /* UIImage+Fabulous.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Fabulous.swift"; sourceTree = "<group>"; };
+		94BC614720F9256D0073D3E2 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		B52D4E712450820300CC5F0F /* FabulousButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FabulousButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,34 +51,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1EC78D61241A94B000645D6C /* Swift */ = {
-			isa = PBXGroup;
-			children = (
-				94AAFB9320EEA6B100A1B0BF /* Actions */,
-				94BC614620F9256D0073D3E2 /* Appearance */,
-				94AAFB9220EEA6AC00A1B0BF /* Views */,
-				94AAFB8A20EEA62600A1B0BF /* Internal */,
-			);
-			path = Swift;
-			sourceTree = "<group>";
-		};
-		1EC78D62241A94C600645D6C /* Objc */ = {
-			isa = PBXGroup;
-			children = (
-				1EC78D63241A94CE00645D6C /* include */,
-				9484267420EE7F0400BE099A /* FabulousButton.m */,
-			);
-			path = Objc;
-			sourceTree = "<group>";
-		};
-		1EC78D63241A94CE00645D6C /* include */ = {
-			isa = PBXGroup;
-			children = (
-				9484267320EE7F0400BE099A /* FabulousButton.h */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
 		1EC78D64241A9A6B00645D6C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,9 +89,11 @@
 		947A47BB20EA8B31005A353D /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				94AAFB9320EEA6B100A1B0BF /* Actions */,
+				94BC614620F9256D0073D3E2 /* Appearance */,
+				94AAFB9220EEA6AC00A1B0BF /* Views */,
+				94AAFB8A20EEA62600A1B0BF /* Internal */,
 				947A47B320EA8B19005A353D /* Fabulous.h */,
-				1EC78D62241A94C600645D6C /* Objc */,
-				1EC78D61241A94B000645D6C /* Swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -157,6 +130,7 @@
 			children = (
 				94AAFB9620EEA6FC00A1B0BF /* FabulousActionLabel.swift */,
 				947A47BC20EA8B43005A353D /* FabulousViewController.swift */,
+				B52D4E712450820300CC5F0F /* FabulousButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -173,7 +147,8 @@
 		94BC614620F9256D0073D3E2 /* Appearance */ = {
 			isa = PBXGroup;
 			children = (
-				94BC614720F9256D0073D3E2 /* UIImage+Fabulous.swift */,
+				943840D424940C7D00B7C4D3 /* UIButton.swift */,
+				94BC614720F9256D0073D3E2 /* UIImage.swift */,
 			);
 			path = Appearance;
 			sourceTree = "<group>";
@@ -186,7 +161,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				947A47B520EA8B19005A353D /* Fabulous.h in Headers */,
-				9484267520EE7F0400BE099A /* FabulousButton.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +206,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 947A47A620EA8B18005A353D;
 			productRefGroup = 947A47B120EA8B19005A353D /* Products */;
@@ -261,13 +236,13 @@
 			files = (
 				94AAFB9520EEA6CC00A1B0BF /* FabulousOverlay.swift in Sources */,
 				94AAFB8F20EEA67300A1B0BF /* FabulousAction.swift in Sources */,
-				9484267620EE7F0400BE099A /* FabulousButton.m in Sources */,
 				94AAFB9720EEA6FC00A1B0BF /* FabulousActionLabel.swift in Sources */,
 				94AAFB9F20EF9B4F00A1B0BF /* UIView+Fabulous.swift in Sources */,
 				947A47BD20EA8B43005A353D /* FabulousViewController.swift in Sources */,
 				94AAFB8920EEA5FA00A1B0BF /* UIButton+Fabulous.swift in Sources */,
+				943840D524940C7D00B7C4D3 /* UIButton.swift in Sources */,
 				94AAFB8D20EEA65B00A1B0BF /* Constants.swift in Sources */,
-				94BC614820F9256E0073D3E2 /* UIImage+Fabulous.swift in Sources */,
+				94BC614820F9256E0073D3E2 /* UIImage.swift in Sources */,
 				94AAFB9120EEA69300A1B0BF /* FabulousActionViews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

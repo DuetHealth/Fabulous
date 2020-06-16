@@ -1,3 +1,5 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Swift Package Manager](https://github.com/DuetHealth/Fabulous/workflows/Swift%20Package%20Manager/badge.svg)](https://github.com/DuetHealth/Fabulous/actions?query=workflow%3A%22Swift+Package+Manager%22) [![Carthage](https://github.com/DuetHealth/Fabulous/workflows/Carthage/badge.svg)](https://github.com/DuetHealth/Fabulous/actions?query=workflow%3ACarthage) [![Cocoapods](https://github.com/DuetHealth/Fabulous/workflows/Cocoapods/badge.svg)](https://github.com/DuetHealth/Fabulous/actions?query=workflow%3ACocoapods)
+
 # Fabulous
 
 Fabulous is a material-inspired floating action button with a little Human Interface flair. Supports singular, primary actions or a collection of speed-dial actions.

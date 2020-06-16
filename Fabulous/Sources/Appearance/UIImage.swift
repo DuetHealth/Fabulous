@@ -1,14 +1,7 @@
-//
-//  UIImage+Fabulous.swift
-//  ADMozaicCollectionViewLayout
-//
-//  Created by Ryan Wachowski on 7/5/18.
-//
-
 import Foundation
 import UIKit
 
-@objc public extension UIImage {
+public extension UIImage {
 
     /// Returns the fab's default plus image.
     static var fabulousDefaultAddImage: UIImage? {

@@ -1,19 +1,19 @@
 import Foundation
 import UIKit
 
-@objc public class FabulousOverlay: UIControl {
+public class FabulousOverlay: UIControl {
 
     private let blurEffectView = UIVisualEffectView(effect: nil)
 
     /// Controls whether the underlying view is blurred during activity.
     ///
     /// The default value of this is `true`.
-    @objc public dynamic var usesBlurOverlay: Bool = true
+    public dynamic var usesBlurOverlay: Bool = true
 
     /// The blur style of the blur effect, when active.
     ///
     /// The default value of this is `.regular` or `.light` depending on availability.
-    @objc public dynamic var blurEffectStyle: UIBlurEffect.Style = {
+    public dynamic var blurEffectStyle: UIBlurEffect.Style = {
         if #available(iOS 10.0, *) { return .regular }
         else { return .light }
     }() {

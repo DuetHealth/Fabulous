@@ -1,24 +1,21 @@
 import Foundation
 import UIKit
-#if SWIFT_PACKAGE
-import FabulousObjc
-#endif
 
 /// Manages the lifecycle and presentation of a floating action button ("fab").
 ///
 /// Use this view controller to add an obvious mechanism for the primary action(s) of the associated view.
 /// The fab supports a single action or multiple "speed-dial" actions.
-@objc open class FabulousViewController: UIViewController {
+open class FabulousViewController: UIViewController {
 
     /// The primary floating button which triggers state changes or the primary action.
-    @objc public let primaryButton = FabulousButton(type: .system)
+    public let primaryButton = UIButton(type: .system)
 
     /// The primary action of the fab, if any.
     ///
     /// When the value of this is non-nil, the fab switches from a collection of speed-dial actions
     /// to a single, primary action. Set this to `nil` to return the fab to a set of speed-dial actions.
     /// If the fab is showing actions and this value is set to an action, the fab hides its actions.
-    @objc public var primaryAction = FabulousAction?.none {
+    public var primaryAction = FabulousAction?.none {
         didSet {
             guard let action = primaryAction else {
                 primaryButton.removeAction(for: .touchUpInside)
@@ -27,20 +24,21 @@ import FabulousObjc
             }
             if isShowingActions { hideActions() }
             primaryButton.removeTarget(self, action: #selector(showActions), for: .touchUpInside)
+            primaryButton.setImage(action.image, for: .normal)
             primaryButton.addAction(action, for: .touchUpInside)
         }
     }
 
     /// Returns the list of actions backing the fab.
-    @objc public private(set) var actions = [FabulousAction]()
+    public private(set) var actions = [FabulousAction]()
 
     /// Returns whether the fab is currently hidden.
-    @objc public var isHidden: Bool {
+    public var isHidden: Bool {
         return overlay.alpha == 0
     }
 
     /// Returns whether the fab is currently showing its actions.
-    @objc public private(set) var isShowingActions = false
+    public private(set) var isShowingActions = false
 
     private let overlay: FabulousOverlay
 
@@ -71,7 +69,7 @@ import FabulousObjc
     ///
     /// The view hierarchy of this instance is private. You should not attempt to modify the view
     /// hierarchy in any way; the behavior of doing so is undefined.
-    @objc public init(overlying viewController: UIViewController) {
+    public init(overlying viewController: UIViewController) {
         overlay = FabulousOverlay()
         super.init(nibName: nil, bundle: nil)
 
@@ -79,7 +77,7 @@ import FabulousObjc
         didMove(toParent: viewController)
     }
 
-    @objc public convenience init(overlying viewController: UIViewController, _ builder: (FabulousViewController) -> ()) {
+    public convenience init(overlying viewController: UIViewController, _ builder: (FabulousViewController) -> ()) {
         self.init(overlying: viewController)
         builder(self)
     }
@@ -107,10 +105,11 @@ import FabulousObjc
         ])
         overlay.interceptingView = primaryButton
 
-        primaryButton.setImage(.fabulousDefaultAddImage, for: .normal)
-        primaryButton.imageEdgeInsets = .standardImageInsets
         primaryButton.addLowShadow()
         primaryButton.layer.cornerRadius = .buttonSize / 2
+        guard primaryAction == nil else { return }
+        primaryButton.setImage(.fabulousDefaultAddImage, for: .normal)
+        primaryButton.imageEdgeInsets = .standardImageInsets
         primaryButton.addTarget(self, action: #selector(showActions), for: .touchUpInside)
     }
 
@@ -150,7 +149,7 @@ import FabulousObjc
     }
 
     /// Adds the action to the end of the list of actions, returning the created views for customization.
-    @discardableResult @objc public func addAction(_ action: FabulousAction) -> FabulousActionViews {
+    @discardableResult public func addAction(_ action: FabulousAction) -> FabulousActionViews {
         actions.append(action)
         let (generatedView, returnedViews) = generateViews(for: action)
         actionsStackView.insertArrangedSubview(generatedView, at: 0)
@@ -158,7 +157,7 @@ import FabulousObjc
     }
 
     /// Inserts the action at the position in the list of actions, returning the created views for customization.
-    @discardableResult @objc public func insertAction(_ action: FabulousAction, at index: Int) -> FabulousActionViews {
+    @discardableResult public func insertAction(_ action: FabulousAction, at index: Int) -> FabulousActionViews {
         actions.insert(action, at: index)
         let subviewIndex = actionsStackView.arrangedSubviews.count - 1 - index
         let (generatedView, returnedViews) = generateViews(for: action)
@@ -167,27 +166,27 @@ import FabulousObjc
     }
 
     /// Inserts the action before the given action, returning the created views for customization.
-    @discardableResult @objc public func insertAction(_ action: FabulousAction, before other: FabulousAction) -> FabulousActionViews {
-        let index = actions.firstIndex(of: other) ?? 0
+    @discardableResult public func insertAction(_ action: FabulousAction, before other: FabulousAction) -> FabulousActionViews {
+        let index = actions.firstIndex { $0.id == action.id } ?? 0
         return insertAction(action, at: index)
     }
 
     /// Inserts the action after the given action, returning the created views for customization.
-    @discardableResult @objc public func insertAction(_ action: FabulousAction, after other: FabulousAction) -> FabulousActionViews {
-        let index = actions.firstIndex(of: other).map { $0 + 1 } ?? 0
+    @discardableResult public func insertAction(_ action: FabulousAction, after other: FabulousAction) -> FabulousActionViews {
+        let index = actions.firstIndex { $0.id == action.id }.map { $0 + 1 } ?? 0
         return insertAction(action, at: index)
     }
 
     /// Removes the action from the list of actions.
-    @objc public func removeAction(_ action: FabulousAction) {
-        guard let index = actions.firstIndex(of: action) else { return }
+    public func removeAction(_ action: FabulousAction) {
+        guard let index = actions.firstIndex(where: { $0.id == action.id }) else { return }
         actions.remove(at: index)
         let subview = actionsStackView.arrangedSubviews[actionsStackView.arrangedSubviews.count - 1 - index]
         actionsStackView.removeArrangedSubview(subview)
         subview.removeFromSuperview()
     }
 
-    @objc public func hideFab() {
+    public func hideFab() {
         guard overlay.alpha != 0 else { return }
         overlay.removeFromSuperview()
         UIView.animate(withDuration: 0.2, animations: {
@@ -195,7 +194,7 @@ import FabulousObjc
         })
     }
 
-    @objc public func showFab() {
+    public func showFab() {
         if let supportedView = self.supportedContainerView {
             addOverlayToContainer(view: supportedView )
         } else {
@@ -258,7 +257,7 @@ import FabulousObjc
     }
 
     private func generateViews(for action: FabulousAction) -> (UIView, FabulousActionViews) {
-        let actionButton = FabulousButton(type: .system)
+        let actionButton = UIButton(type: .system)
         actionButton.layer.cornerRadius = .buttonSize / 2
         actionButton.addHighShadow()
         actionButton.imageEdgeInsets = .standardImageInsets

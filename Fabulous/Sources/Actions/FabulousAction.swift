@@ -1,11 +1,3 @@
-//
-//  FabulousAction.swift
-//  Fabulous
-//
-//  Created by Ryan Wachowski on 7/5/18.
-//  Copyright © 2018 Duet Health LLC. All rights reserved.
-//
-
 import Foundation
 import UIKit
 
@@ -14,7 +6,9 @@ import UIKit
 /// You may use this class to customize the style and behavior triggered by a speed-dial action.
 /// After customizing the action, add it to a `FabulousViewController` to include it in the fab's
 /// shown speed-dial actions.
-@objc public class FabulousAction: NSObject {
+public struct FabulousAction: Identifiable {
+
+    public let id = AnyHashable(UUID())
 
     /// The title of the action. If this value is `nil`, no title is shown.
     public let title: String?
@@ -26,7 +20,7 @@ import UIKit
     public let handler: () -> ()
 
     /// Creates and returns a `FabulousAction` with the specified title, image, and behavior.
-    @objc public init(title: String? = nil, image: UIImage? = nil, handler: @escaping () -> ()) {
+    public init(title: String? = nil, image: UIImage? = nil, handler: @escaping () -> ()) {
         self.title = title
         self.image = image
         self.handler = handler
