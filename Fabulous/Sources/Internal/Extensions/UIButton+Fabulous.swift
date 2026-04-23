@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-fileprivate var fabulousActionKey: UInt8 = 0
+nonisolated(unsafe) private var fabulousActionKey: UInt8 = 0
 
 extension UIButton {
 

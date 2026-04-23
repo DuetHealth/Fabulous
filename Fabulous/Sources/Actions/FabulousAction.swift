@@ -6,7 +6,7 @@ import UIKit
 /// You may use this class to customize the style and behavior triggered by a speed-dial action.
 /// After customizing the action, add it to a `FabulousViewController` to include it in the fab's
 /// shown speed-dial actions.
-public struct FabulousAction: Identifiable {
+public struct FabulousAction: Identifiable, @unchecked Sendable {
 
     public let id = AnyHashable(UUID())
 
@@ -17,10 +17,10 @@ public struct FabulousAction: Identifiable {
     public let image: UIImage?
 
     /// The behavior of the action. This is executed when the action's control is tapped.
-    public let handler: () -> ()
+    public let handler: @MainActor @Sendable () -> ()
 
     /// Creates and returns a `FabulousAction` with the specified title, image, and behavior.
-    public init(title: String? = nil, image: UIImage? = nil, handler: @escaping () -> ()) {
+    public init(title: String? = nil, image: UIImage? = nil, handler: @escaping @MainActor @Sendable () -> ()) {
         self.title = title
         self.image = image
         self.handler = handler
