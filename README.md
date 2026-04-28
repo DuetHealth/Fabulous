@@ -4,7 +4,7 @@
 
 Fabulous is a material-inspired floating action button with a little Human Interface flair. Supports singular, primary actions or a collection of speed-dial actions.
 
-<img src="https://github.com/DuetHealth/Fabulous/raw/master/Demo/demo.gif" width='187' alt="Demo">
+<img src="https://github.com/DuetHealth/Fabulous/raw/main/Demo/demo.gif" width='187' alt="Demo">
 
 ## Usage
 
