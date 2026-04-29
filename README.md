@@ -1,35 +1,31 @@
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Swift Package Manager](https://github.com/DuetHealth/Fabulous/workflows/Swift%20Package%20Manager/badge.svg)](https://github.com/DuetHealth/Fabulous/actions?query=workflow%3A%22Swift+Package+Manager%22) [![Carthage](https://github.com/DuetHealth/Fabulous/workflows/Carthage/badge.svg)](https://github.com/DuetHealth/Fabulous/actions?query=workflow%3ACarthage) [![Cocoapods](https://github.com/DuetHealth/Fabulous/workflows/Cocoapods/badge.svg)](https://github.com/DuetHealth/Fabulous/actions?query=workflow%3ACocoapods)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![CI](https://github.com/DuetHealth/Fabulous/actions/workflows/ci.yml/badge.svg)](https://github.com/DuetHealth/Fabulous/actions/workflows/ci.yml)
 
 # Fabulous
 
 Fabulous is a material-inspired floating action button with a little Human Interface flair. Supports singular, primary actions or a collection of speed-dial actions.
 
-<img src="https://github.com/DuetHealth/Fabulous/raw/master/Demo/demo.gif" width='187' alt="Demo">
+<img src="https://github.com/DuetHealth/Fabulous/raw/main/Demo/demo.gif" width='187' alt="Demo">
 
 ## Usage
 
 ### Installation
 
 Swift Package Manager: 
-```
-// swift-tools-version:5.0
+```swift
+// swift-tools-version:6.2
 
 import PackageDescription
 
 let package = Package(
   name: "FabulousTestProject",
   dependencies: [
-    .package(url: "https://github.com/DuetHealth/Fabulous.git", from: "3.0.0")
+    .package(url: "https://github.com/DuetHealth/Fabulous.git", from: "4.0.0")
   ],
   targets: [
     .target(name: "FabulousTestProject", dependencies: ["Fabulous"])
   ]
 )
 ```
-
-Cocoapods: `pod 'Fabulous', '~> 2.0'`. See [Fabulous.podspec](Fabulous.podspec) for more information.
-
-Carthage: `github "DuetHealth/Fabulous" ~> 2.0 && carthage update`
 
 ### Adding a fab
 

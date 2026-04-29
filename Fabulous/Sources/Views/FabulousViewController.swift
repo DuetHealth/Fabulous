@@ -83,7 +83,9 @@ open class FabulousViewController: UIViewController {
     }
 
     deinit {
-        overlay.removeFromSuperview()
+        MainActor.assumeIsolated {
+            overlay.removeFromSuperview()
+        }
     }
 
     required public init?(coder aDecoder: NSCoder) {

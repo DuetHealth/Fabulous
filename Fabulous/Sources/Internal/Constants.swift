@@ -3,7 +3,7 @@ import UIKit
 
 extension CGFloat {
 
-    static var buttonSize: CGFloat = 56
+    static let buttonSize: CGFloat = 56
 
 }
 
@@ -21,8 +21,8 @@ extension CGSize {
 
 extension UIEdgeInsets {
 
-    static var standardImageInsets = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+    static let standardImageInsets = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
 
-    static var standardTextInsets = UIEdgeInsets(top: 8, left: 16, bottom: 8, right: 16)
+    static let standardTextInsets = UIEdgeInsets(top: 8, left: 16, bottom: 8, right: 16)
 
 }
